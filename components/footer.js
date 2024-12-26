@@ -20,22 +20,13 @@ export default function Footer(props) {
            // It helps us to grow & continue our work. Thank you.
           // OR Purchase PRO version for commercial license.  */}
           <a
-            href="https://web3templates.com/?ref=stablo-template"
-            rel="noopener"
-            target="_blank">
-            Web3Templates
+            href=""
+          >
+            Azwar Dev
           </a>
         </span>
         <span>&middot;</span>
-        <span>
-          {" "}
-          <a
-            href="https://github.com/web3templates/stablo"
-            rel="noopener"
-            target="_blank">
-            Github
-          </a>
-        </span>
+       
       </div>
       <div className="mt-2 flex items-center justify-between">
         {/* <div className="mt-5">
