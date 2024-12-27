@@ -9,7 +9,8 @@ import { urlForImage } from "@/lib/sanity/image";
 import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
-
+import { Inter } from 'next/font/google';
+const inter = Inter({ subsets: ['vietnamese'] });
 export default function Navbar(props) {
   const leftmenu = [
     {
@@ -67,32 +68,20 @@ export default function Navbar(props) {
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <Link href="/" className="w-28 dark:hidden">
-                    {props.logo ? (
-                      <Image
-                        {...urlForImage(props.logo)}
-                        alt="Logo"
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <span className="block text-center">
-                        Stablo
-                      </span>
-                    )}
+                    
+                    <span
+  className={`${inter.className} antialiased`}
+>
+  Dhia
+</span>
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
-                    {props.logoalt ? (
-                      <Image
-                        {...urlForImage(props.logoalt)}
-                        alt="Logo"
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <span className="block text-center">
-                        Stablo
-                      </span>
-                    )}
+                   
+                  <span
+  className={`${inter.className} antialiased`}
+>
+  Dhia
+</span>
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
