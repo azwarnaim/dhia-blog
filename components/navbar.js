@@ -9,8 +9,11 @@ import { urlForImage } from "@/lib/sanity/image";
 import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
-import { Inter } from 'next/font/google';
-const inter = Inter({ subsets: ['vietnamese'] });
+import { Roboto } from 'next/font/google'
+const roboto = Roboto({
+  weight: '700',
+  subsets: ['latin', 'cyrillic-ext'],
+})
 export default function Navbar(props) {
   const leftmenu = [
     {
@@ -18,21 +21,28 @@ export default function Navbar(props) {
       href: "/"
     },
     {
-      label: "About",
-      href: "/about"
+      label: "Book",
+      href: "/book"
     },
     {
-      label: "Contact",
-      href: "/contact"
+      label: "Random Thoughts",
+      href: "/random-thought"
     }
   ];
 
   const rightmenu = [
-    // {
-    //   label: "Download",
-    //   href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-    //   external: true
-    // }
+    {
+      label: "Foods & Cafes",
+      href: "food-cafe",
+    },
+    {
+      label: "Travel Post",
+      href: "food-cafe",
+    },
+    {
+      label: "Meet Dhia",
+      href: "food-cafe",
+    }
   ];
 
   const mobilemenu = [...leftmenu, ...rightmenu];
@@ -67,21 +77,21 @@ export default function Navbar(props) {
                   ))}
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
-                  <Link href="/" className="w-28 dark:hidden">
+                  <Link href="/" className="w-28 dark:hidden text-center text-2xl">
                     
                     <span
-  className={`${inter.className} antialiased`}
->
-  Dhia
-</span>
+                      className={roboto.className}
+                    >
+                      Dhia
+                    </span>
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
                    
                   <span
-  className={`${inter.className} antialiased`}
->
-  Dhia
-</span>
+                    className={roboto.className}
+                  >
+                    Dhia
+                  </span>
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
