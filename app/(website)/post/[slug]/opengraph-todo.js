@@ -28,12 +28,6 @@ export default async function handler({ params }) {
         data: fontData,
         style: "normal"
       }
-      // {
-      //   name: "Inter",
-      //   data: interBoldFont,
-      //   style: "normal",
-      //   weight: 700
-      // }
     ]
   });
 }
